@@ -74,6 +74,20 @@ h1 {
     margin-bottom: -15px;
 }
 
+.up {
+    position: fixed;
+    height: 65px !important;
+    bottom: 23px;
+    right: 20px;
+    z-index: 2;
+}
+
+#top2, #top3, #top4, #top5 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 /* .logo {
     margin-top: -35px;
     margin-left: -25px;
@@ -155,7 +169,7 @@ main section {
 
 #about-us {
     width: 100%;
-    min-height: 55vh;
+    min-height: 50vh;
     background: linear-gradient(#41414177, #41414181), url("../images/4509437.jpg");
     background-position: 0% 66%;
     background-size: cover;
@@ -252,7 +266,7 @@ main section {
 
 #services {
     width: 100%;
-    min-height: 55vh;
+    min-height: 50vh;
     background: linear-gradient(#41414177, #41414181), url("../images/hannah-rodrigo-mf_3yZnC6ug-unsplash.jpg");
     background-position: 0% 5%;
     background-size: cover;
@@ -265,7 +279,7 @@ main section {
 
 #gallery {
     width: 100%;
-    min-height: 55vh;
+    min-height: 50vh;
     background: linear-gradient(#ffffff3a, #ffffff56), url(https://wallpaperaccess.com/full/318166.jpg);
     background-position: 0% 60%; 
     background-size: cover;
@@ -355,7 +369,7 @@ main section {
 
 #contact-us {
     width: 100%;
-    min-height: 55vh;
+    min-height: 50vh;
     background: linear-gradient(#ffffff3a, #ffffff56), url(https://cdn.pixabay.com/photo/2018/12/02/10/07/web-3850917_960_720.jpg);
     background-position: 0% 50%;
     background-size: cover;
