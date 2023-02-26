@@ -7,7 +7,7 @@ AOS.init({
     once: true
 });
 
-// emailjs.init("J-guAhO4A7ZJEkgWK");
+emailjs.init("t8pJZjsvfDFzBm7qt");
 
 function mobile() {
     var x = document.getElementById("nav");
@@ -19,24 +19,24 @@ function mobile() {
     }
 }
 
-// function send() {
+function send() {
 
-//     if (document.getElementById("formular").checkValidity() == false) {
-//         document.getElementById("formular").reportValidity();
-//         return;
-//     }
+    if (document.getElementById("formular").checkValidity() == false) {
+        document.getElementById("formular").reportValidity();
+        return;
+    }
 
-//     var date = {
-//         nume: document.getElementById("nume").value,
-//         email: document.getElementById("email").value,
-//         mesaj: document.getElementById("mesaj").value
-//     };
+    var date = {
+        nume: document.getElementById("nume").value,
+        email: document.getElementById("email").value,
+        mesaj: document.getElementById("mesaj").value
+    };
 
-//     emailjs.send("service_2vm56i1", "template_smycmto", date)
-//         .then(function (raspuns) {
-//             alert("Mesajul a fost transmis.")
-//             document.getElementById("formular").reset();
-//         }, function (error) {
-//             alert("Eroare la transmitere. Contactati programatorul.")
-//         })
-// }
+    emailjs.send("service_rguiedf", "template_yzqylsq", date)
+        .then(function (raspuns) {
+            alert("Mesajul a fost transmis.")
+            document.getElementById("formular").reset();
+        }, function (error) {
+            alert("Eroare la transmitere. Contactati programatorul.")
+        })
+}

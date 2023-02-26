@@ -451,6 +451,7 @@ footer {
 
 .texte_footer a{
     color: var(--primary) !important;
+    text-decoration: none !important;
 }
 
 .logo_footer {
@@ -460,6 +461,8 @@ footer {
 
 .facebook {
     height: 55px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .hamburger {
@@ -592,10 +595,9 @@ footer {
         width: 160px;
         height: 140px;
     }
-    
-    /* .container-noutati {
-        width: 100%;
-        float: none;
-    } */
+
+    .texte_footer {
+        font-size: 20px;
+    }
 
 }
