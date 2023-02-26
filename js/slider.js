@@ -15,4 +15,4 @@ function slider() {
 }
 
 slider();
-setInterval(slider, 4000);
+setInterval(slider, 5000);

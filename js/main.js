@@ -1,4 +1,5 @@
 new SimpleLightbox({ elements: '.container-galerie a' });
+new SimpleLightbox({ elements: '.serv-galerie a'})
 
 AOS.init({
     duration: 900,
