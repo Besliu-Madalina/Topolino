@@ -7,7 +7,7 @@
     <meta name="description"
         content="Topolino Ungheni a luat naștere în anul 2022. Ideea și începutul activității a avut loc în 2019, desfășurând activități distractive pentru copii în aer liber.">
     <meta name="keywords"
-        content="Topolino, Ungheni, teren, jucărie, jucării, topogan, Anatolie, joacă, petreceri, divertisment, distracție">
+        content="Topolino, Ungheni, teren, jucărie, jucării, copii, topogan, Anatolie, joacă, petreceri, divertisment, distracție, activități, distractive">
     <meta name="author" content="Beșliu Mădălina, Mangiurea Teodor">
     <title>Contact Us</title>
 
@@ -18,15 +18,16 @@
     <link rel="stylesheet" href="../css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script> -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="../js/lightbox.js" defer></script>
     <script src="../js/main.js" defer></script>
-    <script src="../js/slider.js" defer></script>
+    <!-- <script src="../js/slider.js" defer></script> -->
 </head>
 
-<body>
+<body onload="onload()">
 
     <header data-aos="fade-down">
         <div class="navbar" id="nav">
@@ -65,6 +66,7 @@
                 <i onclick="mobile()" class="fa fa-bars hamburger" aria-hidden="true"></i>
             </ul>
         </div>
+        <div id="top5"></div>
     </header>
 
     <section class="top-section" id="contact-us">
@@ -75,7 +77,55 @@
 
         <section id="contacte" data-aos="fade-in">
 
-            <div id="top5"></div>
+            <section class="book">
+                <div class="flex_space">
+                    <div class="text col-20">
+                        <h1><span>Rezervează!</span></h1><br><br><br>
+                    </div>
+                    <!-- <form id="form">
+                        <div class="field">
+                            <!- <label for="nume">Nume Prenume </label> ->
+                            <input type="text" placeholder="Nume Prenume" name="nume" id="nume" required>
+                        </div>
+                        <div class="field">
+                            <!- <label for="email">E-mail</label> ->
+                            <input type="text" placeholder="E-mail" name="email" id="email">
+                        </div>
+                        <div class="field">
+                            <!- <label for="data">Data</label> ->
+                            <input type="date" placeholder="Data" name="data" id="data" required>
+                        </div>
+                        <div class="field">
+                            <!- <label for="ora_sosirii">Ora Sosirii</label> ->
+                            <input type="text" placeholder="Ora Sosirii" name="ora_sosirii" id="ora_sosirii" required>
+                        </div>
+                        <div class="field">
+                            <!- <label for="ora_plecarii">Ora Plecării</label> ->
+                            <input type="text" placeholder="Ora Plecării" name="ora_plecarii" id="ora_plecarii" required>
+                        </div>
+                        <div class="field">
+                            <!- <label for="nr_telefon">Numărul de telefon</label> ->
+                            <input type="text" placeholder="Numărul de telefon" name="nr_telefon" id="nr_telefon" required>
+                        </div>
+
+                        <input type="submit" id="button" value="Rezervează!">
+                    </form> -->
+
+                    <div class="col-80 form">
+                        <form id="rezervare" class="grid">
+                            <input type="text" id="nume" placeholder="Name Surname" required>
+                            <input type="email" id="email" placeholder="E-mail">
+                            <input type="text" id="nr_telefon" placeholder="Phone number" required>
+                            <input type="date" id="data" placeholder="Arrival Date" required>
+                            <input type="datetime" id="ora_sosirii" placeholder="Arrival Time" required>
+                            <input type="datetime" id="ora_plecarii" placeholder="Departure Time" required>
+                            <input type="number" id="copii" placeholder="Children" required>
+                            <input type="button" value="SEND MESSAGE" onclick="send2()">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
             <a href="#top5"><img class="up" src="../images/up.png"></a>
 
             <div class="row">
@@ -157,9 +207,10 @@
                 <img class="facebook" src="../images/instagram_icon.png">
             </a>
         </div>
-        <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
-            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div>
-        <div class="text_footer" id="an">2023</div>
+        <!-- <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
+            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div> -->
+        <span class="text_footer" id="year"></span>
+        <!-- <div class="text_footer" id="an">2023</div> -->
     </footer>
 
 </body>

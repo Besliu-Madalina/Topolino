@@ -2,6 +2,7 @@
 
 :root {
     --primary: rgba(235, 235, 235, 0.848);
+    --textfoot: rgba(255, 255, 255, 0.9);
     --secondary: #0e9ac4;
     --text: #1d1d1d;
     --sectionbg: #81b6c5b4;
@@ -233,7 +234,7 @@ main section {
 }
 
 #servicii {
-    min-height: 70vh;
+    min-height: 75vh;
     background: linear-gradient(var(--primary), var(--sectionbg));
 }
 
@@ -361,6 +362,86 @@ main section {
     background: linear-gradient(var(--primary), var(--sectionbg));
 }
 
+
+
+.flex_space {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    overflow: auto;
+}
+
+input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.book {
+    padding: 40px 0;
+    margin-top: -5%;
+    color: #fff;
+}
+
+.book .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book input[type="submit"] {
+    cursor: pointer;
+}
+
+.book h1 span {
+    color: var(--sectionbg);
+}
+
+.book h1 {
+    font-size: 30px;
+}
+
+.book input {
+    padding: 20px;
+}
+
+.book input:nth-last-child(1) {
+    background: var(--sectionbg);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* .field {
+    margin-bottom: 10px;
+}
+
+.field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+.field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none
+} */
+
 .contact-list {
     line-height: 150%;
     list-style: radial-gradient(var(--primary), var(--sectionbg));
@@ -458,7 +539,7 @@ footer {
     text-align: center;
     padding: 20px 10px;
     background: var(--sectionbg);
-    color: var(--primary);
+    color: var(--textfoot);
 }
 
 .text_footer {
@@ -469,12 +550,12 @@ footer {
     font-size: 22px;
 }
 
-.disclaimer_footer {
+/* .disclaimer_footer {
     font-size: 15px;
-}
+} */
 
 .texte_footer a {
-    color: var(--primary) !important;
+    color: var(--textfoot) !important;
     text-decoration: none !important;
 }
 
@@ -501,6 +582,10 @@ footer {
     main section {
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    .top-title {
+        font-size: 160px;
     }
 
     .video {
@@ -560,7 +645,7 @@ footer {
     }
 
     #contact-us {
-        min-height: 40vh;
+        min-height: 45vh;
     }
 
 }
@@ -616,6 +701,23 @@ footer {
         margin-bottom: 20px;
     }
 
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+    
+    .book {
+        padding: 15px 10px;
+        margin-top: 0%;
+        margin-bottom: 3%;
+    }
+    
+    .book h1 {
+        font-size: 28px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.2em;
+    }
+
 }
 
 @media (max-width: 876px) {
@@ -667,6 +769,10 @@ footer {
         padding-right: 5%;
     }
 
+    .top-title {
+        font-size: 160px;
+    }
+
     .navbar.mobile a {
         padding: 10px 200px;
         margin-left: -5%;
@@ -684,6 +790,30 @@ footer {
 
     [class^="col-"] {
         width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    
+    .book {
+        padding: 15px 10px;
+        margin-top: 0%;
+        margin-bottom: 3%;
+    }
+
+    .book .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .book h1 {
+        font-size: 28px;
+        /* writing-mode: vertical-lr; */
+        /* text-orientation: upright; */
+        /* letter-spacing: 0.4em; */
     }
 
 }
@@ -710,10 +840,6 @@ footer {
         margin-left: 11%;
     }
 
-    .top-title {
-        font-size: 160px;
-    }
-
     .ul-serv {
         font-size: 26px;
     }
@@ -733,6 +859,22 @@ footer {
 
     .formular-container {
         margin-bottom: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    
+    .book {
+        margin-bottom: 3%;
+    }
+    
+    .book h1 {
+        font-size: 28px;
+        writing-mode: vertical-lr;
+        /* text-orientation: upright; */
+        letter-spacing: 0.4em;
     }
 
 }
@@ -809,7 +951,6 @@ footer {
     }
 
     .top-title {
-        font-size: 80px;
         line-height: 140%;
     }
 
@@ -850,6 +991,20 @@ footer {
         height: 200px;
     }
 
+    .grid {
+        grid-gap: 15px;
+    }
+    
+    .book {
+        padding: 10px;
+    }
+    
+    .book h1 {
+        font-size: 28px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.4em;
+    }
+
 }
 
 @media (max-width: 712px) {
@@ -872,6 +1027,12 @@ footer {
         width: 280px;
         height: 260px;
     }
+    
+    .book h1 {
+        font-size: 28px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.4em;
+    }
 
     .contact-list {
         font-size: 20px;
@@ -883,6 +1044,7 @@ footer {
 
 }
 
+
 @media (max-width: 640px) {
 
     .navbar.mobile a {
@@ -892,6 +1054,12 @@ footer {
 
     #services {
         min-height: 60vh;
+    }
+    
+    .book h1 {
+        font-size: 28px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.4em;
     }
 
 }
@@ -917,10 +1085,6 @@ footer {
         min-height: 40vh;
     }
 
-    .top-title {
-        font-size: 75px;
-    }
-
     .serv-galerie img {
         width: 180px;
         height: 160px;
@@ -930,6 +1094,20 @@ footer {
         width: 240px;
         height: 220px;
     }
+    
+    .book {
+        padding: 10px 0;
+    }
+    
+    .book h1 {
+        font-size: 30px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.3em;
+    }
+    
+    .book input {
+        padding: 20px;
+    }
 
 }
 
@@ -938,6 +1116,16 @@ footer {
     .container-galerie img {
         width: 220px;
         height: 200px;
+    }
+    
+    .book h1 {
+        font-size: 30px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.3em;
+    }
+
+    .top-title {
+        font-size: 100px;
     }
 
 }
@@ -962,6 +1150,12 @@ footer {
         width: 200px;
         height: 180px;
     }
+    
+    .book h1 {
+        font-size: 30px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.3em;
+    }
 
     .contact-list {
         margin-left: 0px;
@@ -973,11 +1167,36 @@ footer {
 
 }
 
+@media (max-width: 431px) {
+    
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px ;
+    }
+    
+    .book {
+        padding: 15px 10px;
+        margin-top: -5%;
+    }
+    
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
+    }
+
+}
+
 @media (max-width: 415px) {
 
     .navbar.mobile a {
         padding: 10px 0px;
         margin-left: -25%;
+    }
+
+    .top-title {
+        font-size: 95px;
     }
 
     .video {
@@ -987,6 +1206,13 @@ footer {
     .container-galerie img {
         width: 170px;
         height: 150px;
+    }
+    
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
     }
 
     .contact-list {
@@ -1021,6 +1247,13 @@ footer {
         width: 170px;
         height: 150px;
     }
+    
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
+    }
 
     .contact-list {
         margin-left: 0px;
@@ -1041,6 +1274,10 @@ footer {
         height: 140px;
     }
 
+    .top-title {
+        font-size: 90px;
+    }
+
     .contact-list {
         margin-left: 0px;
         font-size: 16px;
@@ -1049,6 +1286,13 @@ footer {
     .contact-list2 {
         margin-left: 0px;
         font-size: 16px;
+    }
+
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
     }
 
 }
@@ -1065,12 +1309,12 @@ footer {
         margin-left: -25%;
     }
 
-    .video {
-        margin-left: 0px;
+    .top-title {
+        font-size: 87px;
     }
 
-    .top-title {
-        font-size: 75px;
+    .video {
+        margin-left: 0px;
     }
 
     .ul-serv {
@@ -1089,6 +1333,13 @@ footer {
     .container-galerie img {
         width: 160px;
         height: 140px;
+    }
+ 
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
     }
 
     .contact-list {
@@ -1111,6 +1362,10 @@ footer {
         margin-left: -25%;
     }
 
+    .top-title {
+        font-size: 83px;
+    }
+
     .text_footer {
         font-size: 23px;
     }
@@ -1119,9 +1374,12 @@ footer {
         width: 140px;
         height: 120px;
     }
-
-    .top-title {
-        font-size: 75px;
+       
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
     }
 
     .contact-list {
@@ -1141,6 +1399,28 @@ footer {
     .container-galerie img {
         width: 140px;
         height: 120px;
+    }
+
+    .top-title {
+        font-size: 80px;
+    }
+
+    /* .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+     */
+    /* .book {
+        padding: 15px 10px;
+        margin-top: -5%;
+        margin-bottom: 3%;
+    }
+     */
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
     }
 
 }
@@ -1192,6 +1472,33 @@ footer {
         font-size: 15px;
     }
 
+    /* .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+     */
+    /* .book {
+        padding: 15px 5px;
+        margin-top: -5%;
+    } */
+    
+    .book h1 {
+        font-size: 25px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: 0.1em;
+    }
+
+    .contact-list {
+        margin-left: 0px;
+        font-size: 16px;
+    }
+
+    .contact-list2 {
+        margin-left: 0px;
+        font-size: 16px;
+    }
+
 }
 
 @media (max-width: 280px) {
@@ -1219,7 +1526,11 @@ footer {
     }
 
     .texte_footer {
-        font-size: 15px;
+        font-size: 13px;
+    }
+
+    .top-title {
+        font-size: 50px;
     }
 
     .text_footer {

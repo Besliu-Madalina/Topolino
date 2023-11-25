@@ -26,7 +26,7 @@
     <script src="../js/slider.js" defer></script>
 </head>
 
-<body>
+<body onload="onload()">
 
     <header data-aos="fade-down">
         <div class="navbar" id="nav">
@@ -65,6 +65,7 @@
                 <i onclick="mobile()" class="fa fa-bars hamburger" aria-hidden="true"></i>
             </ul>
         </div>
+        <div id="top3"></div>
     </header>
 
     <section class="top-section" id="services">
@@ -75,7 +76,6 @@
 
         <section id="servicii" data-aos="fade-in">
 
-            <div id="top3"></div>
             <a href="#top3"><img class="up" src="../images/up.png"></a>
 
             <div class="col-40">
@@ -129,9 +129,10 @@
                 <img class="facebook" src="../images/instagram_icon.png">
             </a>
         </div>
-        <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
-            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div>
-        <div class="text_footer" id="an">2023</div>
+        <!-- <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
+            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div> -->
+        <span class="text_footer" id="year"></span>
+        <!-- <div class="text_footer" id="an">2023</div> -->
     </footer>
 
 </body>

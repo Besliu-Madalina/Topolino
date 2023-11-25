@@ -2,6 +2,7 @@
 
 :root {
     --primary: rgba(235, 235, 235, 0.848);
+    --textfoot: rgba(255, 255, 255, 0.9);
     --secondary: #0e9ac4;
     --text: #1d1d1d;
     --sectionbg: #81b6c5b4;
@@ -119,6 +120,63 @@ html {
     color: var(--secondary);
 }
 
+/* a.found {
+    text-decoration: underline;
+} */
+
+
+#menu-btn {
+    font-size: 34px;
+    color: #7673f8;
+    position: fixed;
+    top: 20px;
+    right: 35px;
+    cursor: pointer;
+    background-color: rgba(150, 150, 150, 0.7);
+    padding: 3px 16px;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+#menu-btn.nav {
+    right: 235px;
+}
+
+#menu-btn:hover {
+    opacity: 0.75;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#side-menu {
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: rgba(11, 16, 35, 0.95);
+    z-index: 2;
+    right: -200px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+#side-menu.nav {
+    right: 0px;
+}
+
+#menu-logo {
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+
+
 .content {
     width: 100%;
     position: absolute;
@@ -133,7 +191,7 @@ footer {
     text-align: center;
     padding: 20px 10px;
     background: var(--sectionbg);
-    color: var(--primary);
+    color: var(--textfoot);
 }
 
 .text_footer {
@@ -149,7 +207,7 @@ footer {
 }
 
 .texte_footer a {
-    color: var(--primary) !important;
+    color: var(--textfoot) !important;
     text-decoration: none !important;
 }
 

@@ -23,10 +23,10 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="js/lightbox.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script src="js/slider.js" defer></script>
+    <!-- <script src="js/slider.js" defer></script> -->
 </head>
 
-<body>
+<body onload="onload()">
     <div class="banner">
         <div class="navbar" id="nav">
             <img src="images/logo.png" class="logo">
@@ -55,6 +55,16 @@
                         <i class="fas fa-images"></i>
                     </a>
                 </li>
+                <!-- <div id="menu-btn" onclick="reservation()">
+                    <i id="reservations" class="fas fa-calendar-check"></i>
+                    <i id="close" class="fas fa-times hidden"></i>
+                </div> -->
+                <!-- <li>
+                    <a id="side-menu" class="found" onclick="rezervation()" href="#">
+                        Reservations &nbsp;
+                        <i class="fas fa-calendar-check"></i>
+                    </a>
+                </li> -->
                 <li>
                     <a href="pages/contacte.html">
                         Contact Us &nbsp;
@@ -91,14 +101,11 @@
                 <img class="facebook" src="images/instagram_icon.png">
             </a>
         </div>
-        <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
-            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div>
-        <div class="text_footer" id="an">2023</div>
+        <!-- <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
+            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div> -->
+        <span class="text_footer" id="year"></span>
+        <!-- <div id="an">2023</div> -->
     </footer>
-
-    <script>
-        alert("Bine ați venit!")
-    </script>
 </body>
 
 </html>
