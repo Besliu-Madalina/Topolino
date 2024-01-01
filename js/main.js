@@ -19,6 +19,16 @@ function mobile() {
     }
 }
 
+// function hamb_mobile() {
+//     var x = document.getElementById("hamb");
+
+//     if (x.className === "hamburger") {
+//         x.className = "hamburger mobile";
+//     } else {
+//         x.className = "hamburger";
+//     }
+// }
+
 function onload() {
     getYear();
     console.log('page loaded');
