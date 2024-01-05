@@ -2,10 +2,13 @@
 
 :root {
     --primary: rgba(235, 235, 235, 0.848);
+    --primary2: rgb(235, 235, 235);
     --textfoot: rgba(255, 255, 255, 0.9);
     --secondary: #0e9ac4;
+    --secondary2: #17b1e0;
     --text: #1d1d1d;
     --sectionbg: #81b6c5b4;
+    --secondsection: #229bc09b;
 }
 
 * {
@@ -81,7 +84,6 @@ h1 {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(var(--primary), var(--sectionbg));
-    ;
 }
 
 .logo {
@@ -103,7 +105,17 @@ h1 {
     text-transform: uppercase;
 }
 
-.navbar ul li::after {
+.navbar ul li.active a {
+    color: var(--secondary) !important;
+    font-weight: bolder;
+}
+
+.navbar ul li:hover a{
+    color: var(--secondsection) !important;
+    font-weight: bolder;
+}
+
+/* .navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -116,10 +128,126 @@ h1 {
 
 .navbar ul li:hover::after {
     width: 100%;
+} */
+
+
+
+/* .sub-menu {
+    display: none;
+} */
+
+/* .navbar ul li:hover .sub-menu {
+    display: block;
+    top: 6%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(var(--primary), var(--sectionbg)) !important;
+}
+
+.navbar ul li:hover .sub-menu ul {
+    display: block;
+    margin: 10px;
+    margin-left: -10%;
+    position: absolute;
+}
+
+.navbar ul li:hover .sub-menu ul li {
+    width: 150px;
+    padding: 10px;
+} */
+
+/* .navbar ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    margin-left: -10px;
+}
+
+.navbar ul li:hover .sub-menu ul {
+    display: block;
+    /* margin: 6px; *
+}
+
+.navbar ul li:hover .sub-menu ul li {
+    width: 100%;
+    padding: 10px 5px 20px 5px;
+    transition: 0.4 ease;
+    text-align: left;
+    line-height: 90%;
+} */
+
+.sub-menu {
+    display: none;
+    margin-top: 3%;
+    left: -65% !important;
+    position: absolute;
+}
+
+.sub-menu ul {
+    position: absolute;
+}
+
+.navbar ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    /* margin-left: -10%; */
+    /* background: linear-gradient(var(--primary), var(--sectionbg)) !important; */
+}
+
+.navbar ul li:hover .sub-menu ul {
+    display: block;
+    margin: 6px;
+    /* background: linear-gradient(var(--primary2), var(--secondary2)) !important; */
+}
+
+.navbar ul li:hover .sub-menu ul li {
+    width: 100%;
+    padding: 10px 5px 10px 10px;
+    margin-bottom: 6px;
+    /* transition: 0.4 ease; */
+    text-align: center !important;
+    line-height: 90%;
+    font-size: 17px;
+    background: linear-gradient(var(--primary2), var(--secondary2)) !important;
+}
+
+.sub-menu2 {
+    display: none;
+    /* margin-top: 3%; */
+    left: -70% !important;
+    position: absolute;
+}
+
+.sub-menu2 ul {
+    position: absolute;
+}
+
+.navbar ul li:hover .sub-menu2 {
+    display: block;
+    position: absolute;
+    /* margin-left: -10%; */
+    /* background: linear-gradient(var(--primary), var(--sectionbg)) !important; */
+}
+
+.navbar ul li:hover .sub-menu2 ul {
+    display: block;
+    margin: 6px;
+    /* background: linear-gradient(var(--primary2), var(--secondary2)) !important; */
+}
+
+.navbar ul li:hover .sub-menu2 ul li {
+    width: 100%;
+    padding: 10px 5px 10px 10px;
+    margin-bottom: 6px;
+    /* transition: 0.4 ease; */
+    text-align: center !important;
+    line-height: 90%;
+    font-size: 17px;
+    background: linear-gradient(var(--primary2), var(--secondary2)) !important;
 }
 
 main section {
-    padding: 70px 15% 35px 15%;
+    padding: 45px 15% 35px 15%;
     position: relative;
 }
 
@@ -362,8 +490,6 @@ main section {
     background: linear-gradient(var(--primary), var(--sectionbg));
 }
 
-
-
 .flex_space {
     display: flex;
     justify-content: space-between;
@@ -561,6 +687,7 @@ footer {
 
 .logo_footer {
     height: 80px;
+    width: auto;
     margin-top: -15px;
 }
 
@@ -584,6 +711,8 @@ footer {
         padding-right: 10%;
     }
 
+    /* about us */
+
     .top-title {
         font-size: 160px;
     }
@@ -603,15 +732,26 @@ footer {
         padding-right: 7%;
     }
 
+    [class^="col-"] {
+        width: 100%;
+    } 
+
+    .up {
+        height: 75px !important;
+        bottom: 23px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    /* about us */
+
     .video {
         max-width: 49%;
         margin-left: 0px;
         margin-right: 5px;
     }
 
-    [class^="col-"] {
-        width: 100%;
-    }
+    /* services */
 
     .ul-serv {
         font-size: 28px;
@@ -622,9 +762,17 @@ footer {
         height: 260px;
     }
 
+    /* gallery */
+
     .container-galerie img {
         width: 240px;
         height: 220px;
+    }
+
+    /* contact us */    
+
+    #contact-us {
+        min-height: 45vh;
     }
 
     .formular-container {
@@ -644,16 +792,56 @@ footer {
         font-size: 35px;
     }
 
-    #contact-us {
-        min-height: 45vh;
-    }
-
 }
 
-@media (max-width: 952px) {
+@media (max-width: 1000px) {
+
+    .navbar a {
+        display: none;
+    }
+
+    .navbar.mobile {
+        float: none;
+        display: flex;
+        background: linear-gradient(var(--primary), var(--sectionbg));
+        align-items: flex-start !important;
+    }
+
+    .navbar.mobile a {
+        float: none;
+        display: flex;
+        align-items: center !important;
+        padding: 10px 130px;
+        margin-top: 20px;
+        font-size: 22px;
+        margin-left: -7%;
+    }
+
+    .navbar.mobile ul li {
+        margin: -10px -26px;
+    }
+
+    .fa-caret-down {
+        display: none;
+    }
+
+    /* .sub-menu {
+        color: #ffffff00;
+    } */
 
     .logo {
-        width: 110px;
+        width: 150px;
+        height: auto;
+        margin-top: -15%;
+        margin-left: -45%;
+    }
+
+    .hamburger {
+        display: inline-block !important;
+        position: absolute;
+        top: 13px;
+        right: 25px;
+        color: var(--text);
     }
 
     .navbar ul li a {
@@ -669,15 +857,32 @@ footer {
         padding-right: 10%;
     }
 
+    .navbar.mobile a {
+        padding: 5px 110px;
+        /* margin-top: 22px; */
+        /* font-size: 17px; */
+        margin-left: -8%;
+    }
+
+    .logo {
+        width: 150px;
+        margin-top: -10%;
+        margin-left: -30%;
+    }
+
+    [class^="col-"] {
+        width: 100%;
+    }
+
+    /* about us */
+
     .video {
         max-width: 78%;
         margin-left: 12%;
         margin-right: 0;
     }
 
-    [class^="col-"] {
-        width: 100%;
-    }
+    /* services */
 
     .ul-serv {
         font-size: 25px;
@@ -687,6 +892,8 @@ footer {
         width: 260px;
         height: 240px;
     }
+
+    /* contact us */
 
     .contact-list {
         font-size: 24px;
@@ -735,31 +942,6 @@ footer {
         right: 25px;
     }
 
-    .navbar a {
-        display: none;
-    }
-
-    .navbar.mobile {
-        float: none;
-        display: flex;
-        background: linear-gradient(var(--primary), var(--sectionbg));
-        align-items: flex-start !important;
-    }
-
-    .navbar.mobile a {
-        float: none;
-        display: flex;
-        align-items: center !important;
-        padding: 10px 100px;
-        margin-top: 20px;
-        font-size: 22px;
-    }
-
-    .navbar ul li::after {
-        left: -20%;
-        bottom: -3px;
-    }
-
 }
 
 @media (max-width: 820px) {
@@ -769,28 +951,78 @@ footer {
         padding-right: 5%;
     }
 
-    .top-title {
-        font-size: 160px;
-    }
-
     .navbar.mobile a {
-        padding: 10px 200px;
-        margin-left: -5%;
+        padding: 5px 92px;
+        /* margin-top: 22px; */
+        font-size: 22px;
+        margin-left: -8.5%;
     }
 
-    .video {
-        max-width: 77%;
-        margin-left: 12%;
-        margin-right: 0;
-    }
-
-    #services {
-        min-height: 40vh;
+    .logo {
+        width: 150px;
+        margin-top: -10%;
+        margin-left: -20%;
     }
 
     [class^="col-"] {
         width: 100%;
     }
+
+    .text_footer {
+        font-size: 30px;
+    }
+
+    .texte_footer {
+        font-size: 28px;
+    }
+
+    .logo_footer {
+        height: 100px;
+        width: auto;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .facebook {
+        height: 65px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* about us */
+
+    #about-us {
+        min-height: 40vh;
+    }
+
+    .top-title {
+        font-size: 145px;
+    }
+
+    .p-despre {
+        font-size: 23px;
+        margin-top: 10px;
+    }
+
+    .slideshow {
+        height: 50vh;
+    }
+
+    .video {
+        max-width: 78%;
+        margin-left: 12%;
+        margin-right: 0;
+        margin-top: 35px;
+        margin-bottom: -15px;
+    }
+
+    /* services */
+
+    #services {
+        min-height: 40vh;
+    }
+
+    /* contact us */
 
     .grid {
         grid-template-columns: repeat(3, 1fr);
@@ -826,19 +1058,28 @@ footer {
     }
 
     .navbar.mobile a {
-        padding: 10px 200px;
-        margin-left: -10%;
-        font-size: 28px;
+        padding: 5px 86px;
+        margin-left: -9%;
+        font-size: 26px;
+    }
+
+    .logo {
+        margin-top: -10%;
+        margin-left: -15%;
     }
 
     [class^="col-"] {
         width: 100%;
     }
 
+    /* about us */
+
     .video {
         max-width: 79%;
         margin-left: 11%;
     }
+
+    /* services */
 
     .ul-serv {
         font-size: 26px;
@@ -848,6 +1089,8 @@ footer {
         width: 240px;
         height: 220px;
     }
+
+    /* contact us */
 
     .contact-list {
         font-size: 25px;
@@ -890,64 +1133,31 @@ footer {
         padding-right: 5%;
     }
 
-    #about-us {
-        min-height: 40vh;
-    }
-
-    #services {
-        min-height: 40vh;
-        background-position: 60% 5%;
-    }
-
-    #gallery {
-        min-height: 40vh;
-    }
-
-    #contact-us {
-        min-height: 40vh;
-        background-position: 50% 50%;
-    }
-
-    .hamburger {
-        display: inline-block !important;
-        position: absolute;
-        top: 15px;
-        right: 25px;
+    .navbar.mobile a {
+        padding: 5px 90px;
+        /* margin-top: 20px; */
+        font-size: 22px;
+        margin-left: -12%;
     }
 
     .logo {
-        width: 100px;
-        margin-top: 0px;
-        margin-left: -10px;
+        width: 150px;
+        margin-top: -10%;
+        margin-left: -5%;
     }
 
-    .video {
-        max-width: 82%;
-        margin-left: 10%;
+    [class^="col-"] {
+        width: 100%;
     }
 
-    .navbar a {
-        display: none;
+    .texte_footer {
+        font-size: 20px;
     }
 
-    .navbar.mobile {
-        float: none;
-        display: flex;
-        background: linear-gradient(var(--primary), var(--sectionbg));
-        align-items: flex-start !important;
-    }
+    /* about us */
 
-    .navbar.mobile a {
-        float: none;
-        display: flex;
-        align-items: center !important;
-        margin-top: 20px;
-        font-size: 22px;
-    }
-
-    .navbar ul li::after {
-        left: -20%;
-        bottom: -3px;
+    #about-us {
+        min-height: 40vh;
     }
 
     .top-title {
@@ -958,23 +1168,16 @@ footer {
         height: 50vh;
     }
 
-    .container-galerie img {
-        width: 160px;
-        height: 140px;
+    .video {
+        max-width: 82%;
+        margin-left: 10%;
     }
 
-    [class^="col-"] {
-        width: 100%;
-    }
+    /* services */
 
-    .formular-container {
-        width: 100%;
-        margin-bottom: 15px;
-        max-width: none;
-    }
-
-    #intro {
-        background-position: 70%;
+    #services {
+        min-height: 40vh;
+        background-position: 60% 5%;
     }
 
     .serv-galerie img {
@@ -982,19 +1185,29 @@ footer {
         height: 200px;
     }
 
-    .texte_footer {
-        font-size: 20px;
+    /* gallery */
+
+    #gallery {
+        min-height: 40vh;
     }
+
+    /* .container-galerie img {
+        width: 160px;
+        height: 140px;
+    } */
 
     .container-galerie img {
         width: 220px;
         height: 200px;
     }
 
-    .grid {
-        grid-gap: 15px;
+    /* contact us */
+
+    #contact-us {
+        min-height: 40vh;
+        background-position: 50% 50%;
     }
-    
+
     .book {
         padding: 10px;
     }
@@ -1005,18 +1218,66 @@ footer {
         letter-spacing: 0.4em;
     }
 
+    .grid {
+        grid-gap: 15px;
+    }
+
+    .formular-container {
+        width: 100%;
+        margin-bottom: 15px;
+        max-width: none;
+    }
+
+    /* #intro {
+        background-position: 70%;
+    } */
+
 }
 
 @media (max-width: 712px) {
 
     .navbar.mobile a {
-        padding: 10px 100px;
+        padding: 5px 100px;
+        font-size: 22px;
+        margin-left: -16%;
+    }
+
+    .logo {
+        width: 140px;
+        margin-top: -15%;
         margin-left: 0%;
+    }
+
+    /* about us */
+
+    #about-us {
+        min-height: 38vh;
     }
 
     .top-title {
         font-size: 120px;
     }
+
+    .p-despre {
+        font-size: 23px;
+        margin-top: 0px;
+    }
+
+    .slideshow {
+        height: 48vh;
+    }
+
+    .i-despre {
+        font-size: 30px !important;
+        line-height: 150%;
+    }
+
+    .video {
+        max-width: 89%;
+        margin-left: 6%;
+    }
+
+    /* services */
 
     .serv-galerie img {
         width: 200px;
@@ -1027,12 +1288,8 @@ footer {
         width: 280px;
         height: 260px;
     }
-    
-    .book h1 {
-        font-size: 28px;
-        writing-mode: vertical-lr;
-        letter-spacing: 0.4em;
-    }
+
+    /* contact us */
 
     .contact-list {
         font-size: 20px;
@@ -1041,20 +1298,40 @@ footer {
     .contact-list2 {
         font-size: 20px;
     }
+    
+    .book h1 {
+        font-size: 28px;
+        writing-mode: vertical-lr;
+        letter-spacing: 0.4em;
+    }
 
 }
-
 
 @media (max-width: 640px) {
 
     .navbar.mobile a {
-        padding: 10px 100px;
-        font-size: 20px;
+        padding: 5px 71px;
+        font-size: 22px;
+        margin-left: -12.5%;
     }
+    
+    .logo {
+        width: 135px;
+        margin-top: -15%;
+        margin-left: 0%;
+    }
+
+    .hamburger {
+        right: 18px;
+    }
+
+    /* services */
 
     #services {
         min-height: 60vh;
     }
+
+    /* contact us */
     
     .book h1 {
         font-size: 28px;
@@ -1072,14 +1349,38 @@ footer {
     }
 
     .navbar.mobile a {
-        padding: 10px 100px;
-        margin-left: -10%;
+        padding: 5px 63px;
+        font-size: 22px;
+        margin-left: -9%;
+    }
+
+    .logo {
+        width: 100px;
+        margin-top: -20%;
+        margin-left: -9%;
+    }
+
+    .texte_footer {
+        font-size: 24px;
+    }
+
+    /* about us */
+
+    #about-us {
+        min-height: 36vh;
+    }
+
+    .p-despre {
+        font-size: 23px;
+        margin-top: 5px;
     }
 
     .video {
         max-width: 100%;
         margin-left: 0px;
     }
+
+    /* services */
 
     #services {
         min-height: 40vh;
@@ -1089,6 +1390,8 @@ footer {
         width: 180px;
         height: 160px;
     }
+
+    /* contact us */
 
     .container-galerie img {
         width: 240px;
@@ -1111,12 +1414,60 @@ footer {
 
 }
 
-@media (max-width: 540px) {
+@media (max-width: 541px) {
+
+    .navbar.mobile a {
+        padding: 5px 51px;
+        /* font-size: 22px; */
+        margin-left: -12%;
+    }
+
+    .logo {
+        width: 120px;
+        margin-left: 5%;
+        margin-top: -15%;
+    }
+
+    .up {
+        height: 65px !important;
+    }
+
+    .text_footer {
+        font-size: 27px;
+    }
+
+    .logo_footer {
+        height: 85px;
+        width: auto;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .facebook {
+        height: 55px;
+        margin-top: 13px;
+        margin-bottom: 3px;
+    }
+
+    /* about us */
+
+    .p-despre {
+        font-size: 20px;
+        margin-top: -10px;
+    }
+
+    .top-title {
+        font-size: 100px;
+    }
+
+    /* gallery */
 
     .container-galerie img {
         width: 220px;
         height: 200px;
     }
+
+    /* contact us */
     
     .book h1 {
         font-size: 30px;
@@ -1124,18 +1475,29 @@ footer {
         letter-spacing: 0.3em;
     }
 
-    .top-title {
-        font-size: 100px;
-    }
-
 }
 
 @media (max-width: 480px) {
 
     .navbar.mobile a {
-        padding: 10px 100px;
-        margin-left: -25%;
+        padding: 5px 51px;
+        /* margin-top: 22px; */
+        font-size: 17px;
+        margin-left: -15%;
     }
+
+    .logo {
+        margin-left: 8%;
+    }
+
+    /* about us */
+
+    .p-despre {
+        font-size: 20px;
+        margin-top: 0px;
+    }
+
+    /* services*/
 
     .ul-serv {
         font-size: 22px;
@@ -1146,10 +1508,14 @@ footer {
         height: 120px;
     }
 
+    /* gallery */
+
     .container-galerie img {
         width: 200px;
         height: 180px;
     }
+
+    /* contact us */
     
     .book h1 {
         font-size: 30px;
@@ -1168,6 +1534,20 @@ footer {
 }
 
 @media (max-width: 431px) {
+
+    .navbar.mobile a {
+        padding: 5px 44px;
+        /* margin-top: 22px; */
+        font-size: 17px;
+        margin-left: -18%;
+    }
+
+    .logo {
+        margin-left: 20%;
+        margin-top: -18%;
+    }
+
+    /* contact us */
     
     .grid {
         grid-template-columns: repeat(1, 1fr);
@@ -1191,9 +1571,18 @@ footer {
 @media (max-width: 415px) {
 
     .navbar.mobile a {
-        padding: 10px 0px;
-        margin-left: -25%;
+        padding: 5px 40px;
+        /* margin-top: 22px; */
+        /* font-size: 17px; */
+        margin-left: -17%;
     }
+
+    .logo {
+        margin-top: -20%;
+        margin-left: 15%;
+    }
+
+    /* about us */
 
     .top-title {
         font-size: 95px;
@@ -1203,10 +1592,14 @@ footer {
         margin-left: 0;
     }
 
+    /* gallery */
+
     .container-galerie img {
         width: 170px;
         height: 150px;
     }
+
+    /* contact us */
     
     .book h1 {
         font-size: 25px;
@@ -1230,9 +1623,34 @@ footer {
 @media (max-width: 412px) {
 
     .navbar.mobile a {
-        padding: 10px 0px;
-        margin-left: -20%;
+        padding: 5px 41px;
+        /* margin-top: 22px; */
+        /* font-size: 17px; */
+        margin-left: -17%;
     }
+
+    .logo {
+        width: 110px;
+        margin-top: -17%;
+        margin-left: 15%;
+    }
+
+    .texte_footer {
+        font-size: 22px;
+    }
+
+    /* about us */
+
+    .slideshow {
+        height: 55vh;
+    }
+
+    .i-despre {
+        font-size: 25px !important;
+        line-height: 150%;
+    }
+
+    /* services*/
 
     .ul-serv {
         font-size: 20px;
@@ -1243,10 +1661,14 @@ footer {
         height: 120px;
     }
 
+    /* gallery */
+
     .container-galerie img {
         width: 170px;
         height: 150px;
     }
+
+    /* contact us */
     
     .book h1 {
         font-size: 25px;
@@ -1269,14 +1691,36 @@ footer {
 
 @media (max-width: 395px) {
 
+    .navbar.mobile a {
+        padding: 5px 37px;
+        /* margin-top: 22px; */
+        /* font-size: 17px; */
+        margin-left: -17%;
+    }
+
+    .logo {
+        margin-top: -20%;
+        margin-left: 15%;
+    }
+
+    /* about us */
+
+    .top-title {
+        font-size: 90px;
+    }
+
+    .texte_footer {
+        font-size: 21px;
+    }
+
+    /* gallery */
+
     .container-galerie img {
         width: 160px;
         height: 140px;
     }
 
-    .top-title {
-        font-size: 90px;
-    }
+    /* contact us */
 
     .contact-list {
         margin-left: 0px;
@@ -1305,17 +1749,55 @@ footer {
     }
 
     .navbar.mobile a {
-        padding: 10px 0px;
-        margin-left: -25%;
+        padding: 5px 37px;
+        font-size: 17px;
+        margin-left: -17%;
     }
+
+    .logo {
+        width: 100px;
+        margin-top: -20%;
+        margin-left: 15%;
+    }
+
+    .hamburger {
+        right: 16px;
+    }
+
+    .text_footer {
+        font-size: 23px;
+    }
+
+    /* about us */
 
     .top-title {
         font-size: 87px;
     }
 
+    .p-despre {
+        font-size: 19px;
+        margin-top: -5px;
+    }
+
+    .slideshow {
+        height: 65vh;
+    }
+
+    .slide-text {
+        padding: 20px 8%;
+        gap: 45px;
+    }
+
+    .i-despre {
+        font-size: 27px !important;
+        line-height: 150%;
+    }
+
     .video {
         margin-left: 0px;
     }
+
+    /* services */
 
     .ul-serv {
         font-size: 20px;
@@ -1326,14 +1808,14 @@ footer {
         height: 120px;
     }
 
-    .text_footer {
-        font-size: 23px;
-    }
+    /* gallery */
 
     .container-galerie img {
         width: 160px;
         height: 140px;
     }
+
+    /* contact us */
  
     .book h1 {
         font-size: 25px;
@@ -1358,22 +1840,92 @@ footer {
 @media (max-width: 360px) {
 
     .navbar.mobile a {
-        padding: 10px 0px;
-        margin-left: -25%;
+        padding: 5px 33px;
+        /* margin-top: 22px; */
+        font-size: 17px;
+        margin-left: -16%;
     }
 
-    .top-title {
-        font-size: 83px;
+    .logo {
+        width: 90px;
+        margin-top: -19%;
+        margin-left: 17%;
+    }
+
+    .hamburger {
+        font-size: 1.5rem;
+        top: 19px;
+        right: 14px;
     }
 
     .text_footer {
         font-size: 23px;
     }
 
+    .logo_footer {
+        height: 70px;
+        width: auto;
+        margin-top: -5px;
+        margin-bottom: 7px;
+    }
+
+    .texte_footer {
+        font-size: 19px;
+    }
+
+    .facebook {
+        height: 50px;
+        margin-top: 13px;
+        margin-bottom: 3px;
+    }
+
+    .up {
+        height: 50px !important;
+        bottom: 15px;
+        right: 13px;
+    }
+
+    /* about us */
+
+    .top-title {
+        font-size: 83px;
+    }
+
+    .p-despre {
+        font-size: 17px;
+        margin-top: -15px;
+    }
+    
+    .slideshow {
+        height: 55vh;
+    }
+
+    .slide-text {
+        gap: 30px;
+    }
+
+    .slide-text i {
+        font-size: 3rem;
+    }
+
+    .i-despre {
+        font-size: 20px !important;
+        line-height: 130%;
+    }
+
+    .video {
+        margin-top: 25px;
+        margin-bottom: -15px;
+    }
+
+    /* services */
+
     .serv-galerie img {
         width: 140px;
         height: 120px;
     }
+
+    /* contact us */
        
     .book h1 {
         font-size: 25px;
@@ -1396,26 +1948,32 @@ footer {
 
 @media (max-width: 355px) {
 
-    .container-galerie img {
-        width: 140px;
-        height: 120px;
-    }
+    /* about us */
 
     .top-title {
         font-size: 80px;
     }
 
+    /* gallery */
+
+    .container-galerie img {
+        width: 140px;
+        height: 120px;
+    }
+    
+    /* contact us */
+
     /* .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 10px;
     }
-     */
-    /* .book {
+    
+    .book {
         padding: 15px 10px;
         margin-top: -5%;
         margin-bottom: 3%;
-    }
-     */
+    } */
+    
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -1428,9 +1986,21 @@ footer {
 @media (max-width: 320px) {
 
     .navbar.mobile a {
-        padding: 10px 0px;
-        margin-left: -35%;
-        font-size: 18px;
+        /* padding: 5px 0px; */
+        /* margin-top: 22px; */
+        font-size: 15px;
+        margin-left: -18%;
+    }
+
+    .navbar.mobile ul li {
+        margin: -15px -26px;
+    }
+
+    .logo {
+        width: 80px;
+        height: auto;
+        margin-left: 20%;
+        margin-top: -30%;
     }
 
     .texte_footer {
@@ -1441,9 +2011,36 @@ footer {
         font-size: 21px;
     }
 
+    /* about us */
+
     .top-title {
         font-size: 70px;
     }
+
+    .p-despre {
+        font-size: 15.5px;
+        margin-top: -15px;
+    }
+
+    .slideshow {
+        height: 55vh;
+    }
+
+    .slide-text {
+        padding: 16px 9%;
+        font-size: 1rem;
+        gap: 45px;
+    }
+
+    .slide-text i {
+        font-size: 2.5rem;
+    }
+
+    .i-despre {
+        font-size: 20px !important;
+    }
+
+    /* services */
 
     #services {
         min-height: 50vh;
@@ -1458,10 +2055,14 @@ footer {
         font-size: 18px;
     }
 
+    /* gallery */
+
     .container-galerie img {
         width: 140px;
         height: 120px;
     }
+
+    /* contact us */
 
     .contact-list {
         margin-left: -5px;
@@ -1509,12 +2110,82 @@ footer {
     }
 
     .navbar.mobile a {
-        padding: 10px 0px;
+        padding: 5px 29px;
+        /* margin-top: 22px; */
+        font-size: 13px;
+        margin-left: -17%;
     }
+
+    .logo {
+        width: 65px;
+        margin-left: 12%;
+    }
+
+    .text_footer {
+        font-size: 18px;
+    }
+
+    .logo_footer {
+        height: 55px;
+        width: auto;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .texte_footer {
+        font-size: 13px;
+    }
+
+    .facebook {
+        height: 45px;
+        margin-top: 13px;
+        margin-bottom: 3px;
+    }
+
+    .up {
+        height: 50px !important;
+    }
+
+    /* about us */
+    
+    #about-us {
+        min-height: 35vh;
+    }
+
+    /* .top-title {
+        font-size: 50px;
+    } */
 
     .top-title {
         font-size: 60px;
     }
+
+    .p-despre {
+        font-size: 14px;
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+
+    .slide-text {
+        padding: 14px 8%;
+        font-size: 0.9rem;
+        gap: 40px;
+    }
+
+    .slide-text i {
+        font-size: 2.5rem;
+    }
+
+    .i-despre {
+        font-size: 19px !important;
+    }
+
+    .video {
+        margin-top: 20px;
+        margin-bottom: -10px;
+    }
+
+    /* services */
 
     .ul-serv {
         font-size: 16px;
@@ -1525,22 +2196,14 @@ footer {
         height: 90px;
     }
 
-    .texte_footer {
-        font-size: 13px;
-    }
-
-    .top-title {
-        font-size: 50px;
-    }
-
-    .text_footer {
-        font-size: 18px;
-    }
+    /* gallery */
 
     .container-galerie img {
         width: 120px;
         height: 100px;
     }
+
+    /* contact us */
 
     .contact-list {
         margin-left: -5px;
@@ -1562,12 +2225,62 @@ footer {
     }
 
     .navbar.mobile a {
-        padding: 10px 0px;
-        margin-left: -25%;
+        padding: 5px 26px;
+        font-size: 11px;
+        margin-left: -22%;
+    }
+
+    .navbar.mobile ul li {
+        margin: -16px -26px;
+    }
+    
+    .logo {
+        height: auto;
+        margin-top: -35%;
+        margin-left: 20%;
     }
 
     .text_footer {
-        font-size: 23px;
+        font-size: 13px;
+    }
+
+    .texte_footer {
+        font-size: 10px;
+    }
+
+    .facebook {
+        height: 40px;
+        width: auto;
+    }
+
+    .logo_footer {
+        height: 50px;
+    }
+
+    /* about us */
+
+    .p-despre {
+        font-size: 13px;
+        margin-top: -10%;
+    }
+
+    .slideshow {
+        height: 75vh;
+    }
+
+    .slide-text {
+        padding: 15px 9%;
+        font-size: 0.80rem;
+        gap: 30px;
+    }
+
+    .slide-text i {
+        font-size: 2rem;
+        line-height: 50%;
+    }
+
+    .i-despre {
+        font-size: 15px !important;
     }
 
 }
