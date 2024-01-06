@@ -353,8 +353,8 @@ footer {
         display: none;
     }
 
-    .navbar ul li:hover .sub-menu {
-        font-size: 0;
+    .navbar ul li:hover .sub-menu ul li a {
+        font-size: 0px !important;
     }
 
     .intro-content {

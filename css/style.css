@@ -110,7 +110,7 @@ h1 {
     font-weight: bolder;
 }
 
-.navbar ul li:hover a{
+.navbar ul li:hover a {
     color: var(--secondsection) !important;
     font-weight: bolder;
 }
@@ -256,6 +256,11 @@ main .servicii {
     position: relative;
 }
 
+main .galerie {
+    padding: 45px 0 35px 0;
+    position: relative;
+}
+
 .centered {
     text-align: center !important;
 }
@@ -375,12 +380,12 @@ main .servicii {
     background: linear-gradient(var(--primary), var(--sectionbg));
 }
 
-.menu-container{
+.menu-container {
     border-top: 4px solid var(--sectionbg);
-    border-bottom: 4px solid var(--sectionbg); 
+    border-bottom: 4px solid var(--sectionbg);
 }
 
-.menu-nav{
+.menu-nav {
     position: relative;
     width: 100%;
     max-width: 1100px;
@@ -390,6 +395,8 @@ main .servicii {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    /* padding-left: 25%;
+    padding-right: 25%; */
 }
 
 .nav-item a {
@@ -397,21 +404,22 @@ main .servicii {
     color: inherit;
 }
 
-.nav-item .button{
+.nav-item .button {
     display: block;
     padding: 8px 14px;
     margin: 8px 14px;
+    text-transform: uppercase;
 }
 
-.nav-item .button:hover{
+.nav-item .button:hover {
     background: var(--secondsection);
 }
 
-.active-button{
+.active-button {
     background: var(--secondsection);
 }
 
-.menu{
+.menu {
     display: none;
     height: 40px;
     width: 80px;
@@ -430,19 +438,28 @@ main .servicii {
     margin-top: 10%;
 }
 
+.ul-serv2 {
+    line-height: 180%;
+    font-size: 20px;
+    list-style: radial-gradient(var(--primary), var(--sectionbg));
+    margin-left: 15%;
+    /* margin-top: 10%; */
+}
+
 .serv-galerie {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    margin-right: 15%;
+    /* margin-bottom: 15px; */
+    /* margin-top: 10px; */
+    /* margin-right: 15%; */
+    margin: 10px 15% 15px 5%;
 }
 
 .serv-galerie img {
-    width: 230px;
-    height: 170px;
+    width: 240px;
+    height: 180px;
     object-fit: cover;
     border-radius: 3px;
 }
@@ -466,11 +483,64 @@ main .servicii {
     background: linear-gradient(var(--primary), var(--sectionbg));
 }
 
+.menu-container2 {
+    border-top: 4px solid var(--sectionbg);
+    border-bottom: 4px solid var(--sectionbg);
+}
+
+.menu-nav2 {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.nav-item2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item2 .button2 {
+    display: block;
+    padding: 8px 14px;
+    margin: 8px 14px;
+    text-transform: uppercase;
+}
+
+.nav-item2 .button2:hover {
+    background: var(--secondsection);
+}
+
+.active-button2 {
+    background: var(--secondsection);
+}
+
+.menu2 {
+    display: none;
+    height: 40px;
+    width: 80px;
+    margin: 13px 30px;
+    background: var(--secondary2);
+    color: #000;
+    border: none;
+    margin-left: auto;
+}
+
 .container-galerie {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    margin-top: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .container-galerie img {
@@ -796,7 +866,7 @@ footer {
 
     [class^="col-"] {
         width: 100%;
-    } 
+    }
 
     .up {
         height: 75px !important;
@@ -831,7 +901,7 @@ footer {
         height: 220px;
     }
 
-    /* contact us */    
+    /* contact us */
 
     #contact-us {
         min-height: 45vh;
@@ -887,9 +957,21 @@ footer {
         display: none;
     }
 
-    /* .sub-menu {
-        color: #ffffff00;
-    } */
+    .navbar ul li:hover .sub-menu ul li {
+        background: #ffffff00 !important;
+    }
+
+    .navbar ul li:hover .sub-menu2 ul li {
+        background: #ffffff00 !important;
+    }
+
+    .navbar ul li:hover .sub-menu ul li a {
+        font-size: 0px !important;
+    }
+
+    .navbar ul li:hover .sub-menu2 ul li a {
+        font-size: 0px !important;
+    }
 
     .logo {
         width: 150px;
@@ -908,6 +990,27 @@ footer {
 
     .navbar ul li a {
         font-size: 16px;
+    }
+
+    /* services */
+
+    .menu {
+        display: block;
+        margin: 10px 30px 5px auto;
+    }
+
+    .menu-nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-item .button {
+        text-align: center;
+        margin: 5px 20px;
+        padding: 5px 14px;
     }
 
 }
@@ -986,13 +1089,13 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 25px;
     }
-    
+
     .book {
         padding: 15px 10px;
         margin-top: 0%;
         margin-bottom: 3%;
     }
-    
+
     .book h1 {
         font-size: 28px;
         writing-mode: vertical-lr;
@@ -1102,7 +1205,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
     }
-    
+
     .book {
         padding: 15px 10px;
         margin-top: 0%;
@@ -1114,7 +1217,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    
+
     .book h1 {
         font-size: 28px;
         /* writing-mode: vertical-lr; */
@@ -1182,11 +1285,11 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
-    
+
     .book {
         margin-bottom: 3%;
     }
-    
+
     .book h1 {
         font-size: 28px;
         writing-mode: vertical-lr;
@@ -1285,7 +1388,7 @@ footer {
     .book {
         padding: 10px;
     }
-    
+
     .book h1 {
         font-size: 28px;
         writing-mode: vertical-lr;
@@ -1372,7 +1475,7 @@ footer {
     .contact-list2 {
         font-size: 20px;
     }
-    
+
     .book h1 {
         font-size: 28px;
         writing-mode: vertical-lr;
@@ -1388,7 +1491,7 @@ footer {
         font-size: 22px;
         margin-left: -12.5%;
     }
-    
+
     .logo {
         width: 135px;
         margin-top: -15%;
@@ -1406,7 +1509,7 @@ footer {
     }
 
     /* contact us */
-    
+
     .book h1 {
         font-size: 28px;
         writing-mode: vertical-lr;
@@ -1471,17 +1574,17 @@ footer {
         width: 240px;
         height: 220px;
     }
-    
+
     .book {
         padding: 10px 0;
     }
-    
+
     .book h1 {
         font-size: 30px;
         writing-mode: vertical-lr;
         letter-spacing: 0.3em;
     }
-    
+
     .book input {
         padding: 20px;
     }
@@ -1542,7 +1645,7 @@ footer {
     }
 
     /* contact us */
-    
+
     .book h1 {
         font-size: 30px;
         writing-mode: vertical-lr;
@@ -1590,7 +1693,7 @@ footer {
     }
 
     /* contact us */
-    
+
     .book h1 {
         font-size: 30px;
         writing-mode: vertical-lr;
@@ -1622,17 +1725,17 @@ footer {
     }
 
     /* contact us */
-    
+
     .grid {
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 15px ;
+        grid-gap: 15px;
     }
-    
+
     .book {
         padding: 15px 10px;
         margin-top: -5%;
     }
-    
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -1678,7 +1781,7 @@ footer {
     }
 
     /* contact us */
-    
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -1747,7 +1850,7 @@ footer {
     }
 
     /* contact us */
-    
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -1894,7 +1997,7 @@ footer {
     }
 
     /* contact us */
- 
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -1936,6 +2039,10 @@ footer {
         right: 14px;
     }
 
+    .top-title {
+        font-size: 71px;
+    }
+
     .text_footer {
         font-size: 23px;
     }
@@ -1965,15 +2072,11 @@ footer {
 
     /* about us */
 
-    .top-title {
-        font-size: 83px;
-    }
-
     .p-despre {
         font-size: 17px;
         margin-top: -15px;
     }
-    
+
     .slideshow {
         height: 55vh;
     }
@@ -1991,20 +2094,53 @@ footer {
         line-height: 130%;
     }
 
-    .video {
-        margin-top: 25px;
-        margin-bottom: -15px;
+    /* services */
+
+    .menu-container {
+        margin-top: -7%;
     }
 
-    /* services */
+    .serv-galerie {
+        margin: -10px 5% 15px 5%;
+    }
 
     .serv-galerie img {
         width: 140px;
         height: 120px;
     }
 
+    .ul-serv {
+        margin-left: 5%;
+        font-size: 19px;
+    }
+
+    .ul-serv2 {
+        margin-left: 5%;
+        font-size: 19px;
+    }
+
+    /* gallery */
+
+    .menu-container2 {
+        margin-top: -7%;
+    }
+
+    .container-galerie {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .video {
+        margin-top: 25px;
+        margin-bottom: -15px;
+    }
+
     /* contact us */
-       
+
+    .lista h3 {
+        font-size: 30px;
+    }
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -2038,7 +2174,7 @@ footer {
         width: 140px;
         height: 120px;
     }
-    
+
     /* contact us */
 
     /* .grid {
@@ -2051,7 +2187,7 @@ footer {
         margin-top: -5%;
         margin-bottom: 3%;
     } */
-    
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -2160,7 +2296,7 @@ footer {
         padding: 15px 5px;
         margin-top: -5%;
     } */
-    
+
     .book h1 {
         font-size: 25px;
         writing-mode: vertical-lr;
@@ -2225,7 +2361,7 @@ footer {
     }
 
     /* about us */
-    
+
     #about-us {
         min-height: 35vh;
     }
@@ -2311,7 +2447,7 @@ footer {
     .navbar.mobile ul li {
         margin: -16px -26px;
     }
-    
+
     .logo {
         height: auto;
         margin-top: -35%;
