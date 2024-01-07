@@ -19,6 +19,14 @@ function mobile() {
     }
 }
 
+var menu = document.querySelector(".menu")
+var header = document.querySelector(".menu-nav")
+
+
+menu.addEventListener("click", function () {
+    header.classList.add("nav-mobile")
+})
+
 // function hamb_mobile() {
 //     var x = document.getElementById("hamb");
 
