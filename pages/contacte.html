@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script> -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
@@ -50,7 +50,7 @@
                 <li>
                     <a href="servicii.html">Ce oferim?<i class="fas fa-caret-down"></i>
                         <!-- <i class="fab fa-usps"></i> -->
-                        </a>
+                    </a>
                     <div class="sub-menu">
                         <ul>
                             <li><a href="perete_escalada.html">Perete escaladă</a></li>
@@ -62,9 +62,9 @@
                     </div>
                 </li>
                 <li>
-                    <a href="galerie.html">Galerie<i class="fas fa-caret-down"></i> 
+                    <a href="galerie.html">Galerie<i class="fas fa-caret-down"></i>
                         <!-- <i class="fas fa-images"></i> -->
-                        </a>
+                    </a>
                     <div class="sub-menu2">
                         <ul>
                             <li><a href="galerie.html">Foto</a></li>
@@ -74,7 +74,7 @@
                 </li>
                 <li class="active">
                     <a href="contacte.html">
-                        Contacte 
+                        Contacte
                         <!-- <i class="fas fa-phone-alt"></i> -->
                     </a>
                 </li>
@@ -127,15 +127,22 @@
                     </form> -->
 
                     <div class="col-80 form">
-                        <form id="rezervare" class="grid">
-                            <input type="text" id="nume" placeholder="Name Surname" required>
-                            <input type="email" id="email" placeholder="E-mail">
-                            <input type="text" id="nr_telefon" placeholder="Phone number" required>
-                            <input type="date" id="data" placeholder="Arrival Date" required>
-                            <input type="datetime" id="ora_sosirii" placeholder="Arrival Time" required>
-                            <input type="datetime" id="ora_plecarii" placeholder="Departure Time" required>
-                            <input type="number" id="copii" placeholder="Children" required>
-                            <input type="button" value="SEND MESSAGE" onclick="send2()">
+                        <form id="rezervare" class="grid" action="https://formsubmit.co/topolino.ungheni2022@gmail.com"
+                            method="POST">
+                            <!-- <input type="hidden" name="access_key" value="1a91e6cc-400a-4ac7-9f44-d105fb68975e"> -->
+                            <input type="text" name="Nume Prenume" id="nume" placeholder="Nume Prenume" required>
+                            <input type="email" name="E-mail" id="email" placeholder="E-mail">
+                            <input type="text" name="Număr de telefon" id="nr_telefon" placeholder="Număr de telefon"
+                                required>
+                            <input type="date" name="Data Rezervării" id="data" placeholder="Data Rezervării" required>
+                            <input type="datetime" name="Ora Sosirii" id="ora_sosirii" placeholder="Ora Sosirii"
+                                required>
+                            <input type="datetime" name="Ora Plecării" id="ora_plecarii" placeholder="Ora Plecării"
+                                required>
+                            <input type="number" name="Nr. de copii" id="copii" placeholder="Nr. de copii" required>
+                            <input type="hidden" name="_captcha" value="false">
+                            <button id="btn" type="submit" value="Transmite">Transmite</button>
+                            <!-- <input type="button" value="Transmite" onclick="send2()"> -->
                         </form>
                     </div>
                 </div>
@@ -183,15 +190,20 @@
                     <br><br><br>
 
                     <div class="formular-container">
-                        <form id="formular">
+                        <!-- <form id="formular" onsubmit="sendEmail(); reset(); return false;"> -->
+                        <form action="https://formsubmit.co/topolino.ungheni2022@gmail.com" method="POST" id="formular">
                             <h3>Lasă un mesaj</h3>
-                            <input type="text" id="nume" placeholder="Nume Prenume" required>
+                            <input type="text" name="Nume Prenume" id="nume" placeholder="Nume Prenume" required>
                             <br>
-                            <input type="email" id="email" placeholder="Email" required>
+                            <input type="email" name="E-mail" id="email" placeholder="E-mail" required>
                             <br>
-                            <textarea id="mesaj" rows="4" placeholder="Mesajul" required></textarea>
+                            <input type="subiect" name="Subiect" id="subiect" placeholder="Subiect" required>
                             <br>
-                            <input type="button" value="Transmite" onclick="send()">
+                            <textarea id="Mesaj" name="mesaj" rows="4" placeholder="Mesajul" required></textarea>
+                            <br>
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- <input type="button" value="Transmite" onclick="send()"> -->
+                            <button id="btn1">Transmite</button>
                         </form>
                     </div>
                 </div>
@@ -227,6 +239,51 @@
         <span class="text_footer" id="year"></span>
         <!-- <div class="text_footer" id="an">2023</div> -->
     </footer>
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "besliumadalina.2006@gmail.com",
+                Password: "MadalinaB2006",
+                To: 'besliumadalina.2006@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New message",
+                Body: "Nume Prenume: " + document.getElementById("nume").value + "<br> Mesaj: " + document.getElementById("mesaj").value
+            }).then(
+                message => alert(message)
+                // message => alert("Message Sent Succesfully!")
+            );
+        }
+    </script> -->
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', function (e) {
+            e.preventDefault()
+            var nume = document.getElementById('nume').value;
+            var email = document.getElementById('email').value;
+            var subiect = document.getElementById('subiect').value;
+            var mesaj = document.getElementById('mesaj').value;
+            var body = 'name: ' + name + '<br> email: ' + email + '<br> subiect: ' + subiect + '<br> mesaj: ' + mesaj;
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "besliumadalina13@gmail.com",
+                Password: "ovml gqdl mbng lqwk",
+                To: 'besliumadalina13@gmail.com',
+                From: email,
+                Name: nume,
+                Subject: subiect,
+                Body: body
+            }).then(
+                message => alert(message)
+            );
+        })
+    </script> -->
 
 </body>
 

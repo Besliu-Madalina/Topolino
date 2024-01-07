@@ -677,9 +677,13 @@ input {
     align-items: center;
 }
 
-.book input[type="submit"] {
+/* .book input[type="submit"] {
     cursor: pointer;
-}
+} */
+
+/* .book button {
+    cursor: pointer;
+} */
 
 .book h1 span {
     color: var(--sectionbg);
@@ -693,10 +697,17 @@ input {
     padding: 20px;
 }
 
-.book input:nth-last-child(1) {
+/* .book input:nth-last-child(1) {
     background: var(--sectionbg);
     color: #fff;
     cursor: pointer;
+} */
+
+.book button {
+    background: var(--sectionbg);
+    color: #fff;
+    cursor: pointer;
+    border: none;
 }
 
 /* .field {
@@ -786,7 +797,14 @@ input[type="submit"] {
     margin: 15px 2% 0px 2%;
 }
 
-.formular-container input[type="button"] {
+/* .formular-container input[type="button"] {
+    cursor: pointer;
+    width: 130px;
+    float: right;
+    margin-right: 10%;
+} */
+
+.formular-container button {
     cursor: pointer;
     width: 130px;
     float: right;
