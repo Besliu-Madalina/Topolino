@@ -7,7 +7,14 @@ AOS.init({
     once: true
 });
 
-emailjs.init("t8pJZjsvfDFzBm7qt");
+window.addEventListener("load", function() {
+    var loadingScreen = document.getElementById("loading-screen");
+    setTimeout(function () {
+        loadingScreen.style.display = "none";
+    }, 1800);
+});
+
+//emailjs.init("t8pJZjsvfDFzBm7qt");
 
 function mobile() {
     var x = document.getElementById("nav");
@@ -69,72 +76,72 @@ function getYear() {
 //     );
 // }
 
-function send2() {
+// function send2() {
 
-    if (document.getElementById("rezervare").checkValidity() == false) {
-        document.getElementById("rezervare").reportValidity();
-        return;
-    }
+//     if (document.getElementById("rezervare").checkValidity() == false) {
+//         document.getElementById("rezervare").reportValidity();
+//         return;
+//     }
 
-    var datal = {
-        nume: document.getElementById("nume").value,
-        email: document.getElementById("email").value,
-        nr_telefon: document.getElementById("nr_telefon").value,
-        data: document.getElementById("data").value,
-        ora_sosirii: document.getElementById("ora_sosirii").value,
-        ora_plecarii: document.getElementById("ora_plecarii").value,
-        copii: document.getElementById("copii").value
-    };
+//     var datal = {
+//         nume: document.getElementById("nume").value,
+//         email: document.getElementById("email").value,
+//         nr_telefon: document.getElementById("nr_telefon").value,
+//         data: document.getElementById("data").value,
+//         ora_sosirii: document.getElementById("ora_sosirii").value,
+//         ora_plecarii: document.getElementById("ora_plecarii").value,
+//         copii: document.getElementById("copii").value
+//     };
 
-    emailjs.send("service_rguiedf", "template_8y9hhja", datal)
-        .then(function (raspuns) {
-            btn.value = 'SEND MESSAGE';
-            alert("Mesajul a fost transmis. Operatorul o să vă contacteze în decurs de câteva ore.")
-            document.getElementById("rezervare").reset();
-        }, function (error) {
-            alert("Eroare la transmitere. Contactati programatorul.")
-        })
-}
+//     emailjs.send("service_rguiedf", "template_8y9hhja", datal)
+//         .then(function (raspuns) {
+//             btn.value = 'SEND MESSAGE';
+//             alert("Mesajul a fost transmis. Operatorul o să vă contacteze în decurs de câteva ore.")
+//             document.getElementById("rezervare").reset();
+//         }, function (error) {
+//             alert("Eroare la transmitere. Contactati programatorul.")
+//         })
+// }
 
-// const btn = document.getElementById('button');
+    // const btn = document.getElementById('button');
 
-// document.getElementById('form')
-//  .addEventListener('submit', function(event) {
-//    event.preventDefault();
+    // document.getElementById('form')
+    //  .addEventListener('submit', function(event) {
+    //    event.preventDefault();
 
-//    btn.value = 'Sending...';
+    //    btn.value = 'Sending...';
 
-//    const serviceID = 'service_rguiedf';
-//    const templateID = 'template_8y9hhja';
+    //    const serviceID = 'service_rguiedf';
+    //    const templateID = 'template_8y9hhja';
 
-//    emailjs.sendForm(serviceID, templateID, this)
-//     .then(() => {
-//       btn.value = 'Rezervează!';
-//       alert('Sent!');
-//     }, (err) => {
-//       btn.value = 'Rezervează!';
-//       alert(JSON.stringify(err));
-//     });
-// });
+    //    emailjs.sendForm(serviceID, templateID, this)
+    //     .then(() => {
+    //       btn.value = 'Rezervează!';
+    //       alert('Sent!');
+    //     }, (err) => {
+    //       btn.value = 'Rezervează!';
+    //       alert(JSON.stringify(err));
+    //     });
+    // });
 
-function send() {
+// function send() {
 
-    if (document.getElementById("formular").checkValidity() == false) {
-        document.getElementById("formular").reportValidity();
-        return;
-    }
+//     if (document.getElementById("formular").checkValidity() == false) {
+//         document.getElementById("formular").reportValidity();
+//         return;
+//     }
 
-    var date = {
-        nume: document.getElementById("nume").value,
-        email: document.getElementById("email").value,
-        mesaj: document.getElementById("mesaj").value
-    };
+//     var date = {
+//         nume: document.getElementById("nume").value,
+//         email: document.getElementById("email").value,
+//         mesaj: document.getElementById("mesaj").value
+//     };
 
-    emailjs.send("service_rguiedf", "template_yzqylsq", date)
-        .then(function (raspuns) {
-            alert("Mesajul a fost transmis.")
-            document.getElementById("formular").reset();
-        }, function (error) {
-            alert("Eroare la transmitere. Contactati programatorul.")
-        })
-}
+//     emailjs.send("service_rguiedf", "template_yzqylsq", date)
+//         .then(function (raspuns) {
+//             alert("Mesajul a fost transmis.")
+//             document.getElementById("formular").reset();
+//         }, function (error) {
+//             alert("Eroare la transmitere. Contactati programatorul.")
+//         })
+// }
