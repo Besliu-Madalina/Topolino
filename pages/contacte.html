@@ -18,51 +18,44 @@
     <link rel="stylesheet" href="../css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script> -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script> -->
-
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="../js/lightbox.js" defer></script>
     <script src="../js/main.js" defer></script>
-    <!-- <script src="../js/slider.js" defer></script> -->
 
     <div id="loading-screen">
         <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
-          <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
-            stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
-          <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
-            stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
-          <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
-            stroke-dasharray="0 440" stroke-linecap="round"></circle>
-          <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
-            stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
         </svg>
-      </div>
+    </div>
 </head>
 
 <body onload="onload()">
 
     <header data-aos="fade-down">
         <div class="navbar" id="nav">
-            <a href="../index.html">
+            <a class="logo-a" href="index.html">
                 <img src="../images/logo.png" class="logo">
             </a>
             <ul>
                 <li>
                     <a href="../index.html">
                         Acasă
-                        <!-- <i class="fas fa-home"></i> -->
                     </a>
                 </li>
                 <li>
                     <a href="despre.html">
                         Despre noi
-                        <!-- <i class="fas fa-info-circle"></i> -->
                     </a>
                 </li>
                 <li>
                     <a href="servicii.html">Ce oferim?<i class="fas fa-caret-down"></i>
-                        <!-- <i class="fab fa-usps"></i> -->
                     </a>
                     <div class="sub-menu">
                         <ul>
@@ -76,7 +69,6 @@
                 </li>
                 <li>
                     <a href="galerie.html">Galerie<i class="fas fa-caret-down"></i>
-                        <!-- <i class="fas fa-images"></i> -->
                     </a>
                     <div class="sub-menu2">
                         <ul>
@@ -88,7 +80,6 @@
                 <li class="active">
                     <a href="contacte.html">
                         Contacte
-                        <!-- <i class="fas fa-phone-alt"></i> -->
                     </a>
                 </li>
                 <i onclick="mobile()" class="fa fa-bars hamburger" aria-hidden="true"></i>
@@ -110,39 +101,10 @@
                     <div class="text col-20">
                         <h1><span>Rezervează!</span></h1><br><br><br>
                     </div>
-                    <!-- <form id="form">
-                        <div class="field">
-                            <!- <label for="nume">Nume Prenume </label> ->
-                            <input type="text" placeholder="Nume Prenume" name="nume" id="nume" required>
-                        </div>
-                        <div class="field">
-                            <!- <label for="email">E-mail</label> ->
-                            <input type="text" placeholder="E-mail" name="email" id="email">
-                        </div>
-                        <div class="field">
-                            <!- <label for="data">Data</label> ->
-                            <input type="date" placeholder="Data" name="data" id="data" required>
-                        </div>
-                        <div class="field">
-                            <!- <label for="ora_sosirii">Ora Sosirii</label> ->
-                            <input type="text" placeholder="Ora Sosirii" name="ora_sosirii" id="ora_sosirii" required>
-                        </div>
-                        <div class="field">
-                            <!- <label for="ora_plecarii">Ora Plecării</label> ->
-                            <input type="text" placeholder="Ora Plecării" name="ora_plecarii" id="ora_plecarii" required>
-                        </div>
-                        <div class="field">
-                            <!- <label for="nr_telefon">Numărul de telefon</label> ->
-                            <input type="text" placeholder="Numărul de telefon" name="nr_telefon" id="nr_telefon" required>
-                        </div>
-
-                        <input type="submit" id="button" value="Rezervează!">
-                    </form> -->
 
                     <div class="col-80 form">
                         <form id="rezervare" class="grid" action="https://formsubmit.co/topolino.ungheni2022@gmail.com"
                             method="POST">
-                            <!-- <input type="hidden" name="access_key" value="1a91e6cc-400a-4ac7-9f44-d105fb68975e"> -->
                             <input type="text" name="Nume Prenume" id="nume" placeholder="Nume Prenume" required>
                             <input type="email" name="E-mail" id="email" placeholder="E-mail">
                             <input type="text" name="Număr de telefon" id="nr_telefon" placeholder="Număr de telefon"
@@ -155,7 +117,6 @@
                             <input type="number" name="Nr. de copii" id="copii" placeholder="Nr. de copii" required>
                             <input type="hidden" name="_captcha" value="false">
                             <button id="btn" type="submit" value="Transmite">Transmite</button>
-                            <!-- <input type="button" value="Transmite" onclick="send2()"> -->
                         </form>
                     </div>
                 </div>
@@ -177,7 +138,6 @@
                             <li><b>Duminică:</b> 09:00-20:00</li>
                         </ul>
                     </div>
-
 
                     <div class="col-50">
                         <br>
@@ -203,7 +163,6 @@
                     <br><br><br>
 
                     <div class="formular-container">
-                        <!-- <form id="formular" onsubmit="sendEmail(); reset(); return false;"> -->
                         <form action="https://formsubmit.co/topolino.ungheni2022@gmail.com" method="POST" id="formular">
                             <h3>Lasă un mesaj</h3>
                             <input type="text" name="Nume Prenume" id="nume" placeholder="Nume Prenume" required>
@@ -215,7 +174,6 @@
                             <textarea id="Mesaj" name="mesaj" rows="4" placeholder="Mesajul" required></textarea>
                             <br>
                             <input type="hidden" name="_captcha" value="false">
-                            <!-- <input type="button" value="Transmite" onclick="send()"> -->
                             <button id="btn1">Transmite</button>
                         </form>
                     </div>
@@ -225,7 +183,6 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d677.6854735487082!2d27.792084129239036!3d47.20206419869753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40caff73574e579f%3A0xbd86e308851f173a!2sTopolino%20Ungheni!5e0!3m2!1sro!2s!4v1672777772819!5m2!1sro!2s"
                         class="harta" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-
                 </div>
             </div>
 
@@ -247,56 +204,8 @@
                 <img class="facebook" src="../images/instagram_icon.png">
             </a>
         </div>
-        <!-- <div class="disclaimer_footer">Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors”
-            organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div> -->
         <span class="text_footer" id="year"></span>
-        <!-- <div class="text_footer" id="an">2023</div> -->
     </footer>
-
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "besliumadalina.2006@gmail.com",
-                Password: "MadalinaB2006",
-                To: 'besliumadalina.2006@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "New message",
-                Body: "Nume Prenume: " + document.getElementById("nume").value + "<br> Mesaj: " + document.getElementById("mesaj").value
-            }).then(
-                message => alert(message)
-                // message => alert("Message Sent Succesfully!")
-            );
-        }
-    </script> -->
-
-    <!-- <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        var btn1 = document.getElementById('btn1');
-        btn1.addEventListener('click', function (e) {
-            e.preventDefault()
-            var nume = document.getElementById('nume').value;
-            var email = document.getElementById('email').value;
-            var subiect = document.getElementById('subiect').value;
-            var mesaj = document.getElementById('mesaj').value;
-            var body = 'name: ' + name + '<br> email: ' + email + '<br> subiect: ' + subiect + '<br> mesaj: ' + mesaj;
-
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "besliumadalina13@gmail.com",
-                Password: "ovml gqdl mbng lqwk",
-                To: 'besliumadalina13@gmail.com',
-                From: email,
-                Name: nume,
-                Subject: subiect,
-                Body: body
-            }).then(
-                message => alert(message)
-            );
-        })
-    </script> -->
 
 </body>
 

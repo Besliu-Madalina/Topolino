@@ -88,8 +88,8 @@ h1 {
 
 .logo {
     width: 120px;
+    height: auto;
     cursor: pointer;
-    margin-left: -10px;
 }
 
 .navbar ul li {
@@ -129,7 +129,6 @@ h1 {
 .navbar ul li:hover::after {
     width: 100%;
 } */
-
 
 .sub-menu {
     display: none;
@@ -1247,6 +1246,10 @@ footer {
 
 @media screen and (max-width: 1024px) {
 
+    .logo-a {
+        display: block !important;
+    }
+
     main section {
         padding-left: 7%;
         padding-right: 7%;
@@ -1994,9 +1997,9 @@ footer {
     }
 
     .logo {
-        width: 135px;
-        margin-top: -15%;
-        margin-left: 0%;
+        width: 100px;
+        margin-top: 4%;
+        margin-left: -5%;
     }
 
     .hamburger {
@@ -2062,8 +2065,22 @@ footer {
 
     .logo {
         width: 100px;
-        margin-top: -20%;
-        margin-left: -9%;
+        margin-top: 4%;
+        margin-left: -5%;
+    }
+
+    .hamburger {
+        display: inline-block !important;
+        position: absolute;
+        top: 19px !important;
+        right: 25px;
+        color: var(--text);
+    }
+
+    .navbar.mobile .logo {
+        width: 100px;
+        margin-top: -15%;
+        margin-left: -11%;
     }
 
     .texte_footer {
@@ -2081,6 +2098,13 @@ footer {
         margin-top: 5px;
     }
 
+    .nav-item .button {
+        text-align: center;
+        margin: 5px 20px;
+        padding: 5px 14px;
+        font-size: 20px;
+    }
+
     .video {
         max-width: 100%;
         margin-left: 0px;
@@ -2094,6 +2118,17 @@ footer {
 
     #services {
         min-height: 40vh;
+    }
+
+    .p-servicii {
+        border: 2px solid lightgray;
+        padding: 12px;
+        border-radius: 5px;
+        background-color: #efefef;
+        font-size: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 9%;
     }
 
     /* .menu {
@@ -2713,23 +2748,41 @@ footer {
 
 @media screen and (max-width: 360px) {
 
-    .navbar.mobile a {
-        padding: 5px 33px;
-        /* margin-top: 22px; */
-        font-size: 17px;
-        margin-left: -16%;
-    }
-
     .logo {
-        width: 90px;
-        margin-top: -19%;
-        margin-left: 17%;
+        display: block !important;
+        width: 100px !important;
+        margin-top: 0vh;
+        margin-left: -2vh;
+        height: auto;
     }
 
     .hamburger {
         font-size: 1.5rem;
-        top: 19px;
-        right: 14px;
+        top: 21px;
+        right: 20px;
+    }
+
+    .navbar.mobile ul li {
+        margin: -10px 0px;
+    }
+
+    .navbar.mobile a {
+        padding: 5px 22px;
+        font-size: 17px;
+        margin-left: 0%;
+    }
+
+    .navbar.mobile .logo {
+        display: block;
+        width: 100px !important;
+        margin-top: -3vh !important;
+        margin-left: 3vh !important;
+    }
+
+    .navbar.mobile a {
+        padding: 5px 13px;
+        font-size: 17px;
+        margin-left: -13%;
     }
 
     .top-title {
@@ -2791,6 +2844,17 @@ footer {
 
     .menu-container {
         margin-top: -7%;
+    }
+
+    .p-servicii {
+        border: 2px solid lightgray;
+        padding: 12px;
+        border-radius: 5px;
+        background-color: #efefef;
+        font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10%;
     }
 
     .serv-galerie {
